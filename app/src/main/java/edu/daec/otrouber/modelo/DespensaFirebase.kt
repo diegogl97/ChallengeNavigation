@@ -71,9 +71,7 @@ class DespensaFirebase  {
 
     }
 
-    fun obtenTodos( ){
-        mutableList.forEach {
-            Log.i("Data", it.descripcion )
-        }
+    fun obtenTodos( ):MutableList<Item>{
+        return mutableList
     }
 }
