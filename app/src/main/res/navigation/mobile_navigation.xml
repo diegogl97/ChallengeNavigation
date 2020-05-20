@@ -7,13 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="edu.daec.otrouber.ui.home.HomeFragment"
+        android:name="edu.daec.otrouber.MapaFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_mapa">
 
         <action
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
             app:destination="@id/nav_home_second" />
+        <action
+            android:id="@+id/action_nav_home_to_despensaFragment"
+            app:destination="@id/despensaFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_altaFragment3"
+            app:destination="@id/altaFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
@@ -30,14 +36,26 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="edu.daec.otrouber.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="edu.daec.otrouber.ui.slideshow.SlideshowFragment"
+        android:id="@+id/altaFragment"
+        android:name="edu.daec.otrouber.AltaFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_alta" />
+    <fragment
+        android:id="@+id/despensaFragment"
+        android:name="edu.daec.otrouber.DespensaFragment"
+        android:label="Despensa"
+        tools:layout="@layout/fragment_despensa" >
+        <action
+            android:id="@+id/action_despensaFragment_to_detalleFragment3"
+            app:destination="@id/detalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="edu.daec.otrouber.DetalleFragment"
+        android:label="fragment_detalle"
+        tools:layout="@layout/fragment_detalle" >
+        <action
+            android:id="@+id/action_detalleFragment3_to_altaFragment"
+            app:destination="@id/altaFragment" />
+    </fragment>
 </navigation>

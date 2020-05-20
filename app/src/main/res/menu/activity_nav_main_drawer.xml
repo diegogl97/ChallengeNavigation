@@ -16,6 +16,5 @@
             android:id="@+id/altaFragment"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
-
     </group>
 </menu>
